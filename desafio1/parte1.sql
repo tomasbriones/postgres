@@ -50,3 +50,13 @@ DELETE FROM posts WHERE id = 3;
   --4 | Pedro          | 2021-04-01     | mi foto de onstigem   | aqui agregue mi foto   | post pedro1
   --5 | Pedro          | 2021-04-01     | mi perfil de onstigem | aqui agregue mi perfil | post pedro2
 
+------Ingresar post de carlos------
+INSERT INTO posts(nombre_usuario,fecha_creacion,contenido,descripcion,titulo) VALUES('Carlos','2021-04-01','mi foto de onstigem','aqui agregue mi foto','nuevo post');
+
+ --id | nombre_usuario | fecha_creacion |       contenido       |      descripcion       |    titulo    
+------+----------------+----------------+-----------------------+------------------------+--------------
+  --1 | Pamela         | 2021-03-31     | mi foto de onstigem   | aqui agregue mi foto   | pamela post1
+  --2 | Pamela         | 2021-03-31     | mi perfil de onstigem | aqui agregue mi perfil | pamela post2
+  --4 | Pedro          | 2021-04-01     | mi foto de onstigem   | aqui agregue mi foto   | post pedro1
+  --5 | Pedro          | 2021-04-01     | mi perfil de onstigem | aqui agregue mi perfil | post pedro2
+  --6 | Carlos         | 2021-04-01     | mi foto de onstigem   | aqui agregue mi foto   | nuevo post
