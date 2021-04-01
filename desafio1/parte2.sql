@@ -31,3 +31,20 @@ INSERT INTO posts(nombre_usuario,fecha_creacion,contenido,descripcion,titulo) VA
   --5 | Pedro          | 2021-04-01     | mi perfil de onstigem | aqui agregue mi perfil   | post pedro2
   --6 | Carlos         | 2021-04-01     | mi foto de onstigem   | aqui agregue mi foto     | nuevo post
   --7 | Margarita      | 2021-04-05     | mi foto de piterste   | aqui agregue foto perfil | post margarita1
+
+------comentarios a post margarita-------
+INSERT INTO comentarios (id,fecha,hora,contenido) VALUES ('7','2021-03-30','21:01:00','Aqui escrio algo'),('7','2021-05-30','13:01:00','Aqui escrio algo mas'),('7','2021-03-30','21:40:00','comentario extra'),('7','2021-03-22','21:01:00','Aqui escrio algo parecido'),('7','2021-03-30','21:10:00','Aqui escrio algo repetido');
+
+ --id |   fecha    |   hora   |         contenido         
+------+------------+----------+---------------------------
+  --1 | 2021-03-30 | 12:01:00 | Aqui escrio algo
+  --1 | 2021-03-30 | 12:01:00 | Aqui escrio algo
+  --6 | 2021-03-30 | 19:01:00 | Aqui escrio algo
+  --6 | 2021-03-30 | 16:01:00 | Aqui escrio algo
+  --6 | 2021-05-30 | 16:01:00 | Aqui escrio algo
+  --6 | 2021-04-30 | 16:01:00 | Aqui escrio algo
+  --7 | 2021-03-30 | 21:01:00 | Aqui escrio algo
+  --7 | 2021-05-30 | 13:01:00 | Aqui escrio algo mas
+  --7 | 2021-03-30 | 21:40:00 | comentario extra
+  --7 | 2021-03-22 | 21:01:00 | Aqui escrio algo parecido
+  --7 | 2021-03-30 | 21:10:00 | Aqui escrio algo repetido
