@@ -45,3 +45,19 @@ SELECT pe.pelicula, re.actor FROM peliculas AS pe JOIN repartos as re ON re.id =
 -- Blade Runner                                  | Harrison Ford
 -- Apocalypse Now                                | Harrison Ford
 -- Indiana Jones y el templo maldito             | Harrison Ford
+
+---10 directores mas populares---
+SELECT pe.director, count(pe.pelicula) AS total FROM peliculas AS pe GROUP BY pe.director ORDER BY total DESC FETCH FIRST 10 ROWS only;
+--       director       | total
+------------------------+-------
+-- Steven Spielberg     |     9
+-- Francis Ford Coppola |     4
+-- Peter Jackson        |     4
+-- Quentin Tarantino    |     3
+-- Martin Scorsese      |     3
+-- Robert Zemeckis      |     3
+-- James Cameron        |     3
+-- Ridley Scott         |     3
+-- George Lucas         |     3
+-- Frank Darabont       |     2
+
