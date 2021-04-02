@@ -68,3 +68,12 @@ SELECT COUNT(DISTINCT actor) as "total actores" from repartos;
 
 ---Peliculas entre 1990 y 1999 ordenadas por titulo---
 SELECT * FROM peliculas WHERE (año_estreno >= 1990 AND año_estreno <= 1999) ORDER BY pelicula ASC;
+-- id |                  pelicula                  | año_estreno |       director
+------+--------------------------------------------+-------------+-----------------------
+-- 76 | American Beauty                            |        1999 | Sam Mendes
+-- 20 | American History X                         |        1998 | Tony Kaye
+--  9 | Braveheart                                 |        1995 | Mel Gibson
+--  7 | Cadena perpetua                            |        1994 | Frank Darabont
+-- 12 | Eduardo Manostijeras                       |        1990 | Tim Burton
+-- 27 | El club de la pelea                        |        1999 | David Fincher
+-- 68 | El Padrino. Parte III                      |        1990 | Francis Ford Coppola
