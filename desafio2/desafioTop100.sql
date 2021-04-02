@@ -77,3 +77,19 @@ SELECT * FROM peliculas WHERE (año_estreno >= 1990 AND año_estreno <= 1999) OR
 -- 12 | Eduardo Manostijeras                       |        1990 | Tim Burton
 -- 27 | El club de la pelea                        |        1999 | David Fincher
 -- 68 | El Padrino. Parte III                      |        1990 | Francis Ford Coppola
+
+---reparto peliculas estrenadas el 2001---
+SELECT re.actor AS actores, pe.pelicula AS pelicula, pe.año_estreno AS estreno FROM repartos AS re JOIN peliculas AS pe ON re.id = pe.id WHERE pe.año_estreno = 2001;
+-- actores      |                     pelicula                      | estreno
+---------------------+---------------------------------------------------+---------
+-- Elijah Wood       | El Se├▒or de los anillos: La comunidad del anillo |    2001
+-- Ian McKellen      | El Se├▒or de los anillos: La comunidad del anillo |    2001
+-- Viggo Mortensen   | El Se├▒or de los anillos: La comunidad del anillo |    2001
+-- Sean Astin        | El Se├▒or de los anillos: La comunidad del anillo |    2001
+-- Sean Bean         | El Se├▒or de los anillos: La comunidad del anillo |    2001
+-- Cate Blanchett    | El Se├▒or de los anillos: La comunidad del anillo |    2001
+-- Hugo Weaving      | El Se├▒or de los anillos: La comunidad del anillo |    2001
+-- Liv Tyler         | El Se├▒or de los anillos: La comunidad del anillo |    2001
+-- Ian Holm          | El Se├▒or de los anillos: La comunidad del anillo |    2001
+-- Christopher Lee   | El Se├▒or de los anillos: La comunidad del anillo |    2001
+
