@@ -15,3 +15,5 @@ CREATE TABLE repartos (id INT, actor VARCHAR(40),FOREIGN KEY (id) REFERENCES pel
 \copy peliculas (id,pelicula,año,estreno,director) FROM 'C:\Users\tomas\escritorio\postgres\desafio2\ApoyoDesafio2\reparto.csv' delimiter ',' CSV header;
 --corregir Alex Angulo linea 575 porque no detecta UTF-8---
 
+--listar todo el reparto de la pelicula Titanic----
+SELECT * FROM peliculas as pe JOIN repartos as re ON re.id = pe.id WHERE pe.pelicula = 'Titanic';
