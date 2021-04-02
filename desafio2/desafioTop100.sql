@@ -61,3 +61,10 @@ SELECT pe.director, count(pe.pelicula) AS total FROM peliculas AS pe GROUP BY pe
 -- George Lucas         |     3
 -- Frank Darabont       |     2
 
+SELECT COUNT(DISTINCT actor) as "total actores" from repartos;
+-- total actores
+-----------------
+--           831
+
+---Peliculas entre 1990 y 1999 ordenadas por titulo---
+SELECT * FROM peliculas WHERE (año_estreno >= 1990 AND año_estreno <= 1999) ORDER BY pelicula ASC;
