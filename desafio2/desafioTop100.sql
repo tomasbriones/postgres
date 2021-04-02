@@ -93,3 +93,36 @@ SELECT re.actor AS actores, pe.pelicula AS pelicula, pe.año_estreno AS estreno 
 -- Ian Holm          | El Se├▒or de los anillos: La comunidad del anillo |    2001
 -- Christopher Lee   | El Se├▒or de los anillos: La comunidad del anillo |    2001
 
+---Actores de la pelicula mas nueva---
+SELECT re.actor,pe.pelicula AS pelicula, pe.año_estreno AS estreno FROM repartos AS re JOIN peliculas AS pe ON re.id = pe.id WHERE pe.año_estreno = (SELECT max(año_estreno) FROM peliculas) ;
+--        actor         |      pelicula       | estreno
+------------------------+---------------------+---------
+-- Christian Bale       | El caballero oscuro |    2008
+-- Heath Ledger         | El caballero oscuro |    2008
+-- Aaron Eckhart        | El caballero oscuro |    2008
+-- Michael Caine        | El caballero oscuro |    2008
+-- Gary Oldman          | El caballero oscuro |    2008
+-- Maggie Gyllenhaal    | El caballero oscuro |    2008
+-- Morgan Freeman       | El caballero oscuro |    2008
+-- Eric Roberts         | El caballero oscuro |    2008
+-- Cillian Murphy       | El caballero oscuro |    2008
+-- Anthony Michael Hall | El caballero oscuro |    2008
+-- Michael Jai White    | El caballero oscuro |    2008
+-- William Fichtner     | El caballero oscuro |    2008
+-- Edison Chen          | El caballero oscuro |    2008
+-- Monique Curnen       | El caballero oscuro |    2008
+-- Chin Han             | El caballero oscuro |    2008
+-- Nestor Carbonell     | El caballero oscuro |    2008
+-- Ritchie Coster       | El caballero oscuro |    2008
+-- Keith Szarabajka     | El caballero oscuro |    2008
+-- Colin McFarlane      | El caballero oscuro |    2008
+-- Melinda McGraw       | El caballero oscuro |    2008
+-- Nathan Gamble        | El caballero oscuro |    2008
+-- Michael Vieau        | El caballero oscuro |    2008
+-- Animada              | Wall-E              |    2008
+-- Robert Downey Jr.    | Iron Man            |    2008
+-- Terrence Howard      | Iron Man            |    2008
+-- Gwyneth Paltrow      | Iron Man            |    2008
+-- Jeff Bridges         | Iron Man            |    2008
+-- Stan Lee             | Iron Man            |    2008
+-- Leslie Bibb          | Iron Man            |    2008
