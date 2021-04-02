@@ -17,3 +17,6 @@ CREATE TABLE repartos (id INT, actor VARCHAR(40),FOREIGN KEY (id) REFERENCES pel
 
 --listar todo el reparto de la pelicula Titanic----
 SELECT * FROM peliculas as pe JOIN repartos as re ON re.id = pe.id WHERE pe.pelicula = 'Titanic';
+
+---listar titulos de pelicula donde actua Harrison Ford----
+SELECT pe.pelicula, re.actor FROM peliculas AS pe JOIN repartos as re ON re.id = pe.id WHERE re.actor = 'Harrison Ford' ;
