@@ -1,0 +1,3 @@
+----CREATE DATA BASE PELICULAS----
+
+CREATE DATABASE peliculas;
