@@ -85,3 +85,15 @@ WHERE inv.total = (SELECT max (invoice.total) from invoice);
 --------------------------------+---------
 -- matias alarcon               | 1320000
 
+---Cliente que pago sobre 100  (dado que 100 no se ajusta a mi escala, puse sobre 100.000 ,pero uno puede editar el rango)---
+SELECT cl.client_name as "Cliente que pago sobre 100.000",
+inv.total as Total
+FROM client as cl 
+JOIN invoice as inv ON cl.id=inv.client_id
+WHERE inv.total > 100000;
+
+-- Cliente que pago sobre 100.000 |  total
+----------------------------------+---------
+-- matias alarcon                 | 1320000
+-- hernan martinez                |  480678
+
