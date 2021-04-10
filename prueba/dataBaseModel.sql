@@ -97,3 +97,12 @@ WHERE inv.total > 100000;
 -- matias alarcon                 | 1320000
 -- hernan martinez                |  480678
 
+---cuantos clientes han comprado el producto 6 nombrando el producto que se compro (probar con otros productos)---
+SELECT COUNT (cl.client_name) as "cantidad de clientes que han comprado",
+pr.product_name as producto
+FROM client as cl
+JOIN invoice as inv ON cl.id=inv.client_id
+JOIN invoice_detail_list as idl ON idl.invoice_id = inv.id
+JOIN product as pr ON pr.id = idl.product_id
+WHERE idl.product_id=6
+GROUP BY producto;
