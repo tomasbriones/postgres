@@ -106,3 +106,7 @@ JOIN invoice_detail_list as idl ON idl.invoice_id = inv.id
 JOIN product as pr ON pr.id = idl.product_id
 WHERE idl.product_id=6
 GROUP BY producto;
+
+-- cantidad de clientes que han comprado |          producto
+-----------------------------------------+----------------------------
+--                                     1 | calzoncillos aerodinamicos
