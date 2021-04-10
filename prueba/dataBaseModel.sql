@@ -74,3 +74,14 @@ INSERT INTO invoice_detail_list (invoice_id,product_id,amount, unitary_price,pro
 INSERT INTO invoice (createt_at,client_id,sub_total,iva,total) VALUES ('2021-02-15',4,5180,518,5698),('2021-02-20',4,436980,43698,480678),('2021-04-01',4,27760,2776,30536),('2021-04-9',4,30990,3099,34089);
 INSERT INTO invoice_detail_list (invoice_id,product_id,amount, unitary_price,product_total) VALUES (7,7,2,2590,5180),(8,7,1,5990,5990),(8,1,1,400000,400000),(8,2,2,30990,30990),(9,5,2,11290,22580),(9,7,2,2590,5180),(10,2,1,30990,30990);
 
+---Cliente con compra mas cara---
+SELECT cl.client_name as "Cliente con factura mas alta",
+inv.total as Total
+FROM client as cl 
+JOIN invoice as inv ON cl.id=inv.client_id
+WHERE inv.total = (SELECT max (invoice.total) from invoice);
+
+-- Cliente con factura mas alta |  total
+--------------------------------+---------
+-- matias alarcon               | 1320000
+
