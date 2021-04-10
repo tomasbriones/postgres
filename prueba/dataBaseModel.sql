@@ -58,3 +58,19 @@ INSERT INTO category (category_name, description_id) VALUES ('insumos basicos','
 
 INSERT INTO product (product_name,unitary_price,category_id,description_product) VALUES ('bicicleta muy buena',400000,3,'bicicleta rapida y portable'),('zapatillas rapidas',30990,3,'zapatillas de la mejor calidad a buen precio'),('cereales donpepito',1290,1,'con todos los ingredientes escenciales'),('enlatados sanfra',990,1,'para sobrevivir la pandemia'),('set clavos 3/4 1kg',11290,2,'claves para tabiques'),('calzoncillos aerodinamicos',5990,3,'para sentirte calido y aerodinamico en todo momento'),('martillo ham',2590,2,'martillo economico y portable'),('tallarines mipasta',890,1,'cocer 3 min y servir al plato, pasta unica');
 
+---2 facturas para el cliente 1---
+INSERT INTO invoice (createt_at,client_id,sub_total,iva,total) VALUES ('2021-03-11',1,1200000,120000,1320000),('2021-04-01',1,36980,3698,40678);
+INSERT INTO invoice_detail_list (invoice_id,product_id,amount, unitary_price,product_total) VALUES (1,1,3,400000,1200000),(2,6,1,5990,5990),(2,2,1,30990,30990);
+
+---3 facturas para el cliente 2---
+INSERT INTO invoice (createt_at,client_id,sub_total,iva,total) VALUES ('2021-03-15',2,3570,357,3927),('2021-03-20',2,1880,188,2068),('2021-04-01',2,33870,3387,37257);
+INSERT INTO invoice_detail_list (invoice_id,product_id,amount, unitary_price,product_total) VALUES (3,3,2,1290,2580),(3,4,1,990,990),(4,8,1,890,890),(4,4,1,990,990),(5,5,3,11290,33870);
+
+---1 factura para el cliente 3---
+INSERT INTO invoice (createt_at,client_id,sub_total,iva,total) VALUES ('2021-04-10',3,30990,3099,34089);
+INSERT INTO invoice_detail_list (invoice_id,product_id,amount, unitary_price,product_total) VALUES (6,2,1,30990,30990);
+
+---4 facturas para el cliente 4---
+INSERT INTO invoice (createt_at,client_id,sub_total,iva,total) VALUES ('2021-02-15',4,5180,518,5698),('2021-02-20',4,436980,43698,480678),('2021-04-01',4,27760,2776,30536),('2021-04-9',4,30990,3099,34089);
+INSERT INTO invoice_detail_list (invoice_id,product_id,amount, unitary_price,product_total) VALUES (7,7,2,2590,5180),(8,7,1,5990,5990),(8,1,1,400000,400000),(8,2,2,30990,30990),(9,5,2,11290,22580),(9,7,2,2590,5180),(10,2,1,30990,30990);
+
